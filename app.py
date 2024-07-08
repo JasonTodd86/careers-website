@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 #flask is the module. Modules always are lower-case
 #from the flask module, I want to import the Flask class
 #this line makes the Flask class available in my script
@@ -14,7 +14,7 @@ app = Flask(__name__)
 # this is telling Flask what function should be returned
 def hello_world():
     #this is a function definition
-    return "<p>Sup, world?!<p>"
+    return render_template('home.html')
     # This function returns an HTML paragraph when it's called
     # The text "Sup, world?!" will be displayed in the browser
 
